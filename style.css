@@ -45,13 +45,76 @@ nav a {
     font-weight:500;
 }
 
-#intro-center {
-    display: grid;
-}
 
 .main-content {
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "intro-center"
+    "intro-secondary"
+    ;
 }
+
+#intro-center {
+    display: grid;
+    grid-area: intro-center;
+    margin:auto;
+    padding: 10rem;
+}
+
+#intro-center .full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.bokabord-knapp {
+    margin: 3rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    background-color: rgb(15, 13, 13);
+    text-decoration: none;
+    list-style-type: none;
+    color:white;
+    font-weight: 550;
+}
+
+
+#intro-secondary {
+    grid-area: intro-secondary;
+    text-align: center;
+    margin: auto;
+    width: 600px;
+}
+
+#intro-secondary h2{
+    font-size:  2.5rem;
+    margin-bottom: 2rem;
+}
+
+#intro-p1, p{
+    margin-bottom: 1.5rem;
+}
+
+#intro-p1, p {
+    font-size: 140%;
+}
+
+#meny-mat h2 {
+    text-align: center;
+    margin: 4rem;
+    font-size: 2rem;
+}
+
+
+
+
 
 .footer {
     grid-area: footer;
