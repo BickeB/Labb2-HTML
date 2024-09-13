@@ -15,27 +15,32 @@ body {
     height: 100vh;
 }
 
-header {
+/* header {
     grid-area:header;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 1.5rem;
     padding: 1.2rem;
+} */
 
+nav {
+    position: fixed;
+    width: 100%;
 }
 
 nav ul {
+    display: flex;
+    align-items:center;
+    justify-content: center;
     list-style-type:none;
     overflow: hidden;
+    background-color:rgba(255, 255, 255, 1);
+    width: 100%;
 
 }
 
 nav li {
     /* Gör så att listan hamnar vågrätt */
     display: inline;
-    margin: 1.5rem;
-    padding: 2rem;
+    margin: 1.2rem;
 }
 
 nav a {
@@ -43,6 +48,7 @@ nav a {
     text-decoration: none;
     color: black;
     font-weight:500;
+    margin: 3rem;
 }
 
 
@@ -57,21 +63,23 @@ nav a {
     ;
 }
 
-#intro-center {
+#intro-image-center {
     display: grid;
     grid-area: intro-center;
-    margin:auto;
-    padding: 10rem;
+    /* margin:auto;
+    padding: 10rem; */
 }
 
-#intro-center .full-width-image {
-    width: 100%;
+.full-width-image {
     height: auto;
+    width: 100%;
     display: block;
 }
 
 h1 {
     font-size: 4rem;
+    text-align: center;
+
 }
 
 .bokabord-knapp {
