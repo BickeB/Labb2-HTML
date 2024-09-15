@@ -1,177 +1,208 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Trattoria Anzio</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li class="nav-item">
-                    <a href="#hem">Hem</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#bokabord">Boka bord</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#meny">Meny</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#kontakt">Kontakta oss</a>
-                </li>
-                <li class="nav-item">
-                    <a href="info">Info</a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#hem">Hem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bokabord">Boka bord</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#meny">Meny</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontakt">Kontakta oss</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#info">Info</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main-content">
-        <!-- Introsektion för en snabb introduktion -->
-        <section id="intro-center">
-            <img src="bilder/pasta-1024pxcropp.jpg"
-            alt="bild_på_pasta"
-            class="full-width-image"
-            >
-            <div class="overlay-content">
-                <h1>Trattoria Anzio</h1>
-                <button type="button" class="bokabord-knapp">Boka bord</button>
-            </div>
+      <!-- Introsektion för en snabb introduktion -->
+      <section id="intro-center">
+        <img
+          src="bilder/pasta-1024pxcropp.jpg"
+          alt="bild_på_pasta"
+          class="full-width-image"
+        />
+        <div class="overlay-content">
+          <h1>Trattoria Anzio</h1>
+          <button type="button" class="bokabord-knapp">Boka bord</button>
+        </div>
+      </section>
 
-        </section>
+      <section id="intro-secondary">
+        <h2>Välkommen till Trattoria Anzio</h2>
+        <p id="intro-p1">
+          Vår mat inspireras av den italienska matkulturen där färska-och
+          kvalitativa råvaror står i centrum.
+        </p>
+        <p id="intro-p2">
+          Trattoria Anzio är en genuin restaurang där fokuset ligger i att
+          leverera matupplevelser i världsklass. Med hjälp av vår fantastiska
+          personal ser vi fram emot att ta hand om er i en mysig och
+          välkommnande miljö.
+        </p>
+      </section>
+      <div id="h2-meny"><b>Meny</b></div>
+      <!-- Sektion med meny -->
+      <section id="meny-mat">
+        <dl id="antipasti-meny">
+          <!-- <div class="h3-meny-titel">
+            <h3>Antipasti</h3>
+          </div> -->
+          <dt>Antipasti Misti</dt>
+          <dd>
+            Husets utvalda charkuterier och ostar från Italien. Säsongens röror
+            och kockens tomatmarmelad. 125 kr
+          </dd>
 
-        <section id="intro-secondary">
-            <h2>Välkommen till Trattoria Anzio</h2>
-            <p id="intro-p1">
-                Vår mat inspireras av den italienska matkulturen där
-                färska-och kvalitativa råvaror står i centrum.
-            </p>
-            <p id="intro-p2">
-                Trattoria Anzio är en genuin restaurang där
-                fokuset ligger i att leverera matupplevelser i världsklass.
-                Med hjälp av vår fantastiska personal ser vi fram emot att
-                ta hand om er i en mysig och välkommnande miljö.
-            </p>
-        </section>
+          <dt>Bruschetta</dt>
+          <dd>
+            Hembakat surdegsbröd, vitlök, tomat, buffelmozzarella & basilika.
+            100 kr
+          </dd>
 
-        <!-- Sektion med meny -->
-        <section id="meny-mat">
+          <dt>Pane</dt>
+          <dd>Husets färskbakta surdegsbröd</dd>
 
-            <!-- <h2>Meny</h2> -->
-            <dl id="antipasti-meny">
-                <!-- <h3>Antipasti</h3> -->
-                <dt>Antipasti Misti</dt>
-                <dd>Husets utvalda charkuterier och ostar från Italien.
-                    Säsongens röror och kockens tomatmarmelad. 125 kr
-                </dd>
+          <dt>Prosciutto</dt>
+          <dd>Lagrad Prosciutto 100g 2p. 79 kr</dd>
 
-                <dt>Bruschetta</dt>
-                <dd>Hembakat surdegsbröd, vitlök, tomat,
-                    buffelmozzarella & basilika. 100 kr</dd>
+          <dt>Oliver</dt>
+          <dd>Husets utvalda oliver. 49 kr</dd>
+        </dl>
 
-                <dt>Pane</dt>
-                <dd>Husets färskbakta surdegsbröd</dd>
+        <dl id="pasta-meny">
+          <!-- <div class="h3-meny-titel">
+            <h3>Pasta</h3>
+          </div> -->
+          <dt>Spaghetti Alla Carbonara</dt>
+          <dd>Guanciale, äggula och parmesan. 140 kr</dd>
 
-                <dt>Prosciutto</dt>
-                <dd>Lagrad Prosciutto 100g 2p. 79 kr</dd>
+          <dt>Linguine Alla Salsiccia</dt>
+          <dd>Salssicia, tomat, färnkål & parmesan. 130 kr</dd>
 
-                <dt>Oliver</dt>
-                <dd>Husets utvalda oliver. 49 kr</dd>
+          <dt>Ravioli Formaggio</dt>
+          <dd>Rökt getostravioli, honung och valnötter. 150 kr</dd>
 
-            </dl>
+          <dt>Pappardelle Al Ragù</dt>
+          <dd>Ragu på högrev, rödvin, vitlök & örter. 175 kr</dd>
+        </dl>
 
-            <dl id="pasta-meny">
-                <!-- <h3>Pasta</h3> -->
-                <dt>Spaghetti Alla Carbonara</dt>
-                <dd>Guanciale, äggula och parmesan. 140 kr</dd>
+        <dl id="pizza-meny">
+          <!-- <div class="h3-meny-titel">
+            <h3>Pizza</h3>
+          </div> -->
+          <dt>Margharita</dt>
+          <dd>
+            Tomatsås på san marzano-tomater, fior di latte & basilika. 120 kr
+          </dd>
 
-                <dt>Linguine Alla Salsiccia</dt>
-                <dd>Salssicia, tomat, färnkål & parmesan. 130 kr</dd>
+          <dt>Capricciosa</dt>
+          <dd>
+            Tomatsås på san marzano-tomater, fior di latte, skinka & svamp. 130
+            kr
+          </dd>
 
-                <dt>Ravioli Formaggio</dt>
-                <dd>Rökt getostravioli, honung och valnötter. 150 kr</dd>
+          <dt>Pepperoni burrata</dt>
+          <dd>
+            Tomatsås på san marzano-tomater, fior di latte, pepperoni & burrata.
+            140 kr
+          </dd>
+        </dl>
 
-                <dt>Pappardelle Al Ragù</dt>
-                <dd>Ragu på högrev, rödvin, vitlök & örter</dd>
+        <dl id="vino-meny">
+          <!-- <div class="h3-meny-titel">
+            <h3>Vino</h3>
+          </div> -->
+          <dt>Husets röda</dt>
+          <dd>Nonnas utvalda rödvin. 85 kr</dd>
 
-            </dl>
+          <dt>Husets vita</dt>
+          <dd>Nonnas utvalda vitvin. 85 kr</dd>
 
-            <dl id="vino-meny">
-                <!-- <h3>Vino</h3> -->
-                <dt>Husets röda</dt>
-                <dd>Nonnas utvalda rödvin. 85 kr</dd>
+          <dt>Rosévin</dt>
+          <dd>Fråga personalen</dd>
+        </dl>
 
-                <dt>Husets vita</dt>
-                <dd>Nonnas utvalda vitvin. 85 kr</dd>
-            </dl>
+        <dl id="birra-meny">
+          <!-- <div class="h3-meny-titel">
+            <h3>Birra</h3>
+          </div> -->
+          <dt>Birra Moretti</dt>
+          <dd>Ljus lager. 50 kr</dd>
 
-            <dl id="birra-meny">
-                <!-- <h3>Birra</h3> -->
-                <dt>Birra Moretti</dt>
-                <dd>Ljus lager. 50 kr</dd>
+          <dt>Peroni</dt>
+          <dd>Ljus lager. 60 kr</dd>
 
-                <dt>Peroni</dt>
-                <dd>Ljus lager. 60 kr</dd>
+          <dt>Nastru Azzuro</dt>
+          <dd>Ljus lager. 75 kr</dd>
+        </dl>
 
-                <dt>Nastru Azzuro</dt>
-                <dd>Ljus lager. 75 kr</dd>
+        <dl id="dolci-meny">
+          <!-- <div class="h3-meny-titel">
+            <h3>Dolci</h3>
+          </div> -->
+          <dt>Tiramisu</dt>
+          <dd>Klassisk Tiramisu. 89 kr</dd>
 
-            </dl>
+          <dt>Mascarpone</dt>
+          <dd>
+            Vispad mascarpone med smulad kakdeg & säsongens frukter. 79 kr
+          </dd>
 
-            <dl id="dolci-meny">
-                <!-- <h3>Dolci</h3> -->
-                <dt>Tiramisu</dt>
-                <dd>Klassisk Tiramisu. 89 kr</dd>
-
-                <dt>Mascarpone</dt>
-                <dd>Vispad mascarpone med smulad kakdeg & säsongens frukter. 79 kr</dd>
-
-                <dt>Gelato Pistacchio</dt>
-                <dd>Pistageglass. 69 kr </dd>
-            </dl>
-
-        </section>
-
-        <!-- <section>
-            <h2>Rubrik</h2>
-        </section> -->
+          <dt>Gelato Pistacchio</dt>
+          <dd>Pistageglass. 69 kr</dd>
+        </dl>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <h3>Öppettider</h3>
-            <dl>
-                <dt><b>Måndag-Torsdag:</b></dt>
-                <dd>17:00 - 23:00</dd>
+      <div class="footer-content" id="footer-oppettider">
+        <h3>Öppettider</h3>
+        <dl>
+          <dt><b>Måndag-Torsdag:</b></dt>
+          <dd>17:00 - 23:00</dd>
 
-                <dt><b>Fredag:</b></dt>
-                <dd>16:00 - 01:00</dd>
+          <dt><b>Fredag:</b></dt>
+          <dd>16:00 - 01:00</dd>
 
-                <dt><b>Lördag:</b></dt>
-                <dd>16:00 - 01:00</dd>
+          <dt><b>Lördag:</b></dt>
+          <dd>16:00 - 01:00</dd>
 
-                <dt><b>Söndag:</b></dt>
-                <dd>17:00 - 23:00</dd>
+          <dt><b>Söndag:</b></dt>
+          <dd>17:00 - 23:00</dd>
+        </dl>
+      </div>
 
-            </dl>
-        </div>
+      <div class="footer-content" id="footer-bokabord">
+        <h3>Boka Bord</h3>
+        <button type="button" class="bokabord-knapp">Boka bord</button>
+      </div>
 
-        <div class="footer-content">
-            <h3>Boka Bord</h3>
-            <button type="button" class="bokabord-knapp">Boka bord</button>
-        </div>
-
-        <div class="footer-content">
-            <h3>Kontakt</h3>
-            <p>Telefon: 08-123 321 70</p>
-            <p>Email: <a href="#info@restauranganzio.se" style="color: black;">info@restauranganzio.se</a> </p>
-
-        </div>
-
+      <div class="footer-content" id="footer-kontakt">
+        <h3>Kontakt</h3>
+        <p><b>Telefon:</b> 08-123 321 70</p>
+        <p>
+          <b>Email:</b>
+        </p>
+        <a href="#info@restauranganzio.se" style="color: black"
+          >info@restauranganzio.se</a
+        >
+      </div>
     </footer>
-</body>
+  </body>
 </html>
