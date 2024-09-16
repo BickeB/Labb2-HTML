@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:"Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -53,6 +53,7 @@ nav a::after {
     height:2.5px;
     background-color: transparent; /*Ser till att linjen är transparent by default */
     transition: background-color 0.5s ease;
+    padding: 1px;
 }
 
 nav a:hover::after {
@@ -94,49 +95,6 @@ ul a:hover {
     transition: 0.5s;
 
 }
-
-/* Min gamla nav som jag inte lyckades få responsivt */
-/* nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    Detta säkerställer att nav hamnar ovanför bl.a bilden som täckte den innan detta.
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
-} */
-
-/* nav ul {
-    positionering av innehåll i nav
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    list-style-type:none;
-    overflow: hidden;
-    Testade att ha nav lite genomskinligt - därav detta format av background-color
-    background-color:white;
-    width: 100%;
-} */
-
-/* nav li {
-    Gör så att listan hamnar vågrätt
-    display: inline;
-    margin: 1.2rem;
-} */
-
-/* nav a {
-    Tar bort understrecket i länken
-    text-decoration: none;
-    color: black;
-    font-weight:500;
-    margin-left: 3rem;
-    margin-right: 3rem;
-} */
-
-/* nav a:hover {
-    border-bottom: 2px solid black;
-} */
-
-
 
 .main-content {
     grid-area: main-content;
@@ -309,10 +267,25 @@ dt, dd{
     justify-content:space-evenly;
     align-items: flex-start;
     text-align: center;
+    /* border-top: solid 3px #b91717; */
 }
 
-.footer-content {
-    margin:2rem;
+.email-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-content p{
+    margin: 1rem;
+    padding: 0;
+}
+
+.footer-content a {
+    font-size: 1.2rem;
+}
+
+.footer-content .email-container {
+    margin-right: 0.5rem;
 }
 
 .footer-content h3 {
@@ -335,6 +308,9 @@ dt, dd{
 
 #footer-kontakt {
     grid-area: footer-kontakt;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
 }
 
 /* Note to self: Kom ihåg! Detta är efter förändring av storlek på skärmen */
