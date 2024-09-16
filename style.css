@@ -1,405 +1,423 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Detta gör att scrollningen smooth efter man klickat på länkarna. Innan hoppade den direkt.*/
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family:"Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
     "header"
     "main-content"
     "footer";
-    height: 100vh;
+  height: 100vh;
 }
 
 header {
-    grid-area:header;
+  grid-area: header;
 }
 
 nav {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 0.5rem;
-    width: 100%;
-    /* Säkerställer att nav hamnar "längst fram" */
-    z-index: 10;
-    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.7) ;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.5rem;
+  width: 100%;
+  /* Säkerställer att nav hamnar "längst fram" */
+  z-index: 10;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.7);
 }
 
-
+/* Nav's a-innehåll */
 nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    position: relative;
-    padding-bottom: 0.2rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 0.2rem;
 }
 
+/* skapar ett pseudo-element.
+Här fick jag prova mig fram till att få en röd linje under navbar-listorna.
+*/
 
-
-/* skapar ett pseudo-element */
 nav a::after {
-    content: ''; /*En tom sträng */
-    position: absolute;
-    left:0;
-    bottom: 0;
-    width: 100%;
-    height:2.5px;
-    background-color: transparent; /*Ser till att linjen är transparent by default */
-    transition: background-color 0.5s ease;
-    padding: 1px;
+  content: "";
+  /*En tom sträng */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: transparent;
+  /*Ser till att linjen är transparent by default */
+  transition: background-color 0.5s ease;
+  padding: 1px;
 }
 
+/* Vid hover över elementet */
 nav a:hover::after {
-    background-color:#b91717;
+  background-color: #b91717;
 }
 
+/* "logga" agerar som en logga, men är bara text */
 #logga {
-    font-size: 2rem;
-    color: #23272a;
-    font-weight: 500;
-    margin-left: 1rem;
+  font-size: 2rem;
+  color: #23272a;
+  font-weight: 500;
+  margin-left: 1rem;
 }
+
 /* Checkbox */
 input[type="checkbox"] {
-    /* För att dölja den */
-    appearance: none;
-    -webkit-appearance: none;
+  /* För att dölja den */
+  appearance: none;
+  /* -webkit-appearance: none; */
 }
 
 label {
-    display: none;
+  display: none;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 ul a {
-    padding: 1.2rem;
-    color: black;
-    font-weight: 500;
-    margin-right: 1rem;
+  padding: 1.2rem;
+  color: black;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: 0.5s ease;
 }
 
 ul a:hover {
-    color:#36a543;
-    transition: 0.5s;
-
+  color: #36a543;
+  transition: 0.5s;
 }
 
 .main-content {
-    grid-area: main-content;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    "intro-center"
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "intro-main"
     "intro-secondary";
 }
 
-#intro-center {
-    position:relative;
-    width: 100%;
-    overflow: hidden;
+/* Detta är första sectionen man ser. */
+#intro-main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* bilden */
 .full-width-image {
-    height: auto;
-    width: 100%;
-    display: block;
-    object-fit: cover; /* Hjälper att hålla bildens proportioner*/
-    position: relative;
+  height: auto;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  /* Hjälper att hålla bildens proportioner*/
+  position: relative;
 }
 
 .overlay-content {
-    position: absolute;
-    height:auto;
-    padding: 5rem;
-    color: white;
-    top:50%;
-    left: 50%;
-    text-align: center;
-    /* Efter lite forskning fick jag hjälp att centrera av transform under */
-    transform:translate(-50%, -50%);
-    border-radius: 5px;
-    max-width: 90%;
-    box-sizing: border-box;
+  position: absolute;
+  height: auto;
+  padding: 5rem;
+  color: white;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  /* Efter lite forskning fick jag hjälp att centrera av transform under */
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  max-width: 90%;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-size: 3rem;
-    width: 30rem;
-    margin: 2rem;
-    padding: 2rem;
-    background-color:rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.7) ;
+  font-size: 3rem;
+  width: 30rem;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.7);
 }
 
 .bokabord-knapp {
-    margin: auto;
-    padding: 1rem 2.5rem;
-    margin-top: 3rem;
-    border-radius: 5px;
-    border: solid 2.5px black;
-    background-color:rgba(0, 0, 0, 0.7);
-    color:white;
-    text-decoration: none;
-    list-style-type: none;
-    font-weight: 550;
-    font-size: 1.2rem;
-
+  margin: auto;
+  padding: 1rem 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: solid 2.5px black;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: 550;
+  font-size: 1.2rem;
 }
 
 button:hover {
-    background-color: #36a543;
-    transition: 0.7s;
+  background-color: #36a543;
+  transition: 0.7s;
 }
 
+/* Sectionen med innehåll
+"1.Välkommen till.. 2. Vår mat inspireras.. 3. Trattoria Anzio är..
+ */
 #intro-secondary {
-    grid-area: intro-secondary;
-    text-align: center;
-    padding: 4rem;
-    width: auto;
-    min-width: 20rem;
-    background-color: rgb(229, 230, 231);
-    display: grid;
+  grid-area: intro-secondary;
+  text-align: center;
+  padding: 4rem;
+  width: auto;
+  min-width: 20rem;
+  background-color: rgb(229, 230, 231);
+  display: grid;
 }
 
-#intro-secondary h2{
-    font-size:  2.5rem;
-    margin-bottom: 2rem;
+/* "Välkommen till Trattoria Anzio */
+#intro-secondary h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-#intro-p1, p{
-    margin-bottom: 1.5rem;
+/* Vår mat inspireras av.... */
+#intro-p1,
+p {
+  margin-bottom: 1.5rem;
+  font-size: 140%;
 }
 
-#intro-p1, p {
-    font-size: 140%;
+/* H2 för "Meny" */
+#meny-header {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  grid-area: meny-header;
+  margin: 1rem;
 }
 
-#h2-meny {
-    font-size:  2.5rem;
-    text-align: center;
-    margin-top: 2rem;
-    grid-area: h2-meny;
-}
-
+/* Menyns innehåll */
 #meny-mat {
-    display: grid;
-    grid-area: meny-mat;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
+  display: grid;
+  grid-area: meny-mat;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "meny-header meny-header meny-header"
     "antipasti pizza-meny pasta-meny"
     "vino-meny birra-meny dolci-meny";
-    grid-gap: 2rem;
-    text-align: center;
-    padding: 3rem;
+  grid-gap: 2rem;
+  text-align: center;
+  padding: 3rem;
 }
 
-
+/* Min rubriklösning inom en div, då det inte fungerar att ha rubrikelement i <dl>S */
 .overrubrik-dl {
-    font-size: 1.7rem;
-    margin-bottom: 2rem;
-    background-color: #36a543;
-    border-bottom: #b91717 4px solid;
-    border-radius: 5px;
-    padding: 0.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  /* box-shadow: 0 3.5px 4px #b91717; */
+  border: solid 2px black;
+  padding: 0.5rem;
 }
 
 #meny-mat dd {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #meny-mat dt {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #antipasti-meny {
-    grid-area: antipasti;
+  grid-area: antipasti;
 }
 
 #pasta-meny {
-    grid-area: pasta-meny;
+  grid-area: pasta-meny;
 }
 
 #pizza-meny {
-    grid-area: pizza-meny;
+  grid-area: pizza-meny;
 }
 
 #vino-meny {
-    grid-area: vino-meny;
+  grid-area: vino-meny;
 }
 
 #birra-meny {
-    grid-area: birra-meny;
+  grid-area: birra-meny;
 }
 
 #dolci-meny {
-    grid-area: dolci-meny;
+  grid-area: dolci-meny;
 }
 
 dl {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
-dt, dd{
-    margin-bottom: 0.5rem;
+dt,
+dd {
+  margin-bottom: 0.5rem;
 }
 
+/* Footer-class */
 .footer {
-    grid-area: footer;
-    height: 20rem;
-    background-color:rgb(229, 230, 231);;
-    display:flex;
-    justify-content:space-evenly;
-    align-items: flex-start;
-    text-align: center;
-    /* border-top: solid 3px #b91717; */
+  grid-area: footer;
+  height: 20rem;
+  background-color: rgb(229, 230, 231);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  text-align: center;
 }
 
 .email-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.footer-content p{
-    margin: 1rem;
-    padding: 0;
+.footer-content p {
+  margin: 1rem;
+  padding: 0;
 }
 
 .footer-content a {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .footer-content .email-container {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .footer-content h3 {
-    font-size: 1.5rem;
-    padding: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .footer-content dl {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #footer-oppettider {
-    grid-area: footer-oppettider;
+  grid-area: footer-oppettider;
 }
 
 #footer-bokabord {
-    grid-area: footer-bokabord;
+  grid-area: footer-bokabord;
 }
 
 #footer-kontakt {
-    grid-area: footer-kontakt;
-    display: flex;
-    align-items:center;
-    flex-direction: column;
+  grid-area: footer-kontakt;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Note to self: Kom ihåg! Detta är efter förändring av storlek på skärmen */
-@media (min-width:360px) {
-    .main-content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "intro-image-center"
-        "intro-secondary"
-        "h2-meny"
-        "meny-mat"
-        ;
-    }
+@media (min-width: 360px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro-image-center"
+      "intro-secondary"
+      "h2-meny"
+      "meny-mat";
+  }
 
-    #meny-mat {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "antipasti"
-        "pizza-meny"
-        "pasta-meny"
-        "vino-meny"
-        "birra-meny"
-        "dolci-meny"
-        ;
+  #meny-mat {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "meny-header"
+      "antipasti"
+      "pizza-meny"
+      "pasta-meny"
+      "vino-meny"
+      "birra-meny"
+      "dolci-meny";
+  }
 
-    }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "footer-oppettider"
+      "footer-bokabord"
+      "footer-kontakt";
+    height: auto;
+  }
 
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "footer-oppettider"
-        "footer-bokabord"
-        "footer-kontakt"
-        ;
-        height: auto;
-
-    }
-
-    .footer-content {
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
+  .footer-content {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 /* Note to self: Före ändring */
 @media (min-width: 1024px) {
-    #meny-mat {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "antipasti pizza-meny pasta-meny"
-            "vino-meny birra-meny dolci-meny";
-    }
+  #meny-mat {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "meny-header meny-header meny-header"
+      "antipasti pizza-meny pasta-meny"
+      "vino-meny birra-meny dolci-meny";
+  }
 
-    .footer {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "footer-oppettider footer-bokabord footer-kontakt ";
-    }
-
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "footer-oppettider footer-bokabord footer-kontakt ";
+  }
 }
 
-/* Denna media query skapar en hamburgarmeny vid 860px. Det är ungefär då "vanliga" nav-baren behöver bryta */
-@media screen and (max-width:860px) {
-    label   {
-        display: block;
-    }
+/* Denna media query skapar en hamburgarmeny vid 920px. Det är ungefär då "vanliga" nav-baren behöver bryta för att en sömlös övergång. Denna hjälper till responsiviteten på webbsidan och gör att hamburgarmenyn träder fram efter brytpunkten. */
+@media screen and (max-width: 920px) {
+  label {
+    display: block;
+  }
 
-    ul {
-        font-size: 1rem;
-        position: absolute;
-        left: -100%;
-        flex-direction: column;
-        align-items: center;
-        background-color:white;
-        gap: 2em;
-        top: 60px;
-        width: 100%;
-        height:auto; /*Anpassar efter innehållet */
-        transition: 0.6s;
-        margin-top: 0;
-        padding: 2rem;
-    }
+  ul {
+    font-size: 1rem;
+    position: absolute;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 2em;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    /*Anpassar efter innehållet */
+    transition: 0.6s;
+    margin-top: 0;
+    padding: 2rem;
+  }
 
-    .overlay-content {
-        display: none;
-    }
+  .overlay-content {
+    display: none;
+  }
 
-    input[type="checkbox"]:checked ~ ul {
-        left: 0;
-    }
+  input[type="checkbox"]:checked ~ ul {
+    left: 0;
+  }
 }
+
+/* Validated 16/9-24 */

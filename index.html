@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Länk till font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,34 +24,35 @@
   <body>
     <header>
       <nav>
-        <a href="#logga" id="logga">Trattoria Anzio</a>
+        <!-- #/länkarna går till hoppar till olika delarna. Hade jag gjort fler html-sidor, hade de istället hoppat till dem. -->
+        <a href="#jumplink-main-content" id="logga">Trattoria Anzio</a>
         <input type="checkbox" id="hamburger" />
         <label for="hamburger">
           <i class="fa-solid fa-bars"></i>
         </label>
         <ul>
           <li class="nav-item">
-            <a class="nav-link" href="#hem">Hem</a>
+            <a class="nav-link" href="#jumplink-main-content">Hem</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#bokabord">Boka bord</a>
+            <a class="nav-link" href="#jumplink-main-content">Boka bord</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#meny">Meny</a>
+            <a class="nav-link" href="#meny-header">Meny</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#kontakt">Kontakta oss</a>
+            <a class="nav-link" href="#footer-kontakt">Kontakta oss</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#info">Info</a>
+            <a class="nav-link" href="#intro-secondary">Info</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-content">
-      <!-- Introsektion för en snabb introduktion -->
-      <section id="intro-center">
+    <main class="main-content" id="jumplink-main-content">
+      <!-- Introsektion med bild och namn på restaurang-->
+      <section id="intro-main">
         <img
           src="bilder/pasta-1024pxcropp.jpg"
           alt="bild_på_pasta"
@@ -62,6 +64,7 @@
         </div>
       </section>
 
+      <!-- Introsektion med mer om restaurangen -->
       <section id="intro-secondary">
         <h2>Välkommen till Trattoria Anzio</h2>
         <p id="intro-p1">
@@ -75,11 +78,14 @@
           välkommnande miljö.
         </p>
       </section>
-      <div id="h2-meny"><b>Meny</b></div>
+      <!-- <div id="h2-meny"><b>Meny</b></div> -->
       <!-- Sektion med meny -->
       <section id="meny-mat">
+        <h2 id="meny-header">Meny</h2>
         <dl id="antipasti-meny">
-          <div class="overrubrik-dl">Antipasti</div>
+          <!-- Insåg på tok försent att det inte går att ha rubrikelement inom dl-element. Min lösning var att placera ytterligare ett <dt> för överrubrik -->
+
+          <dt class="overrubrik-dl">Antipasti</dt>
           <dt>Antipasti Misti</dt>
           <dd>
             Husets utvalda charkuterier och ostar från Italien. Säsongens röror
@@ -93,7 +99,7 @@
           </dd>
 
           <dt>Pane</dt>
-          <dd>Husets färskbakta surdegsbröd</dd>
+          <dd>Husets färskbakta surdegsbröd. 60 kr</dd>
 
           <dt>Prosciutto</dt>
           <dd>Lagrad Prosciutto 100g 2p. 79 kr</dd>
@@ -103,7 +109,7 @@
         </dl>
 
         <dl id="pasta-meny">
-          <div class="overrubrik-dl">Pasta</div>
+          <dt class="overrubrik-dl">Pasta</dt>
           <dt>Spaghetti Alla Carbonara</dt>
           <dd>Guanciale, äggula och parmesan. 140 kr</dd>
 
@@ -121,7 +127,7 @@
         </dl>
 
         <dl id="pizza-meny">
-          <div class="overrubrik-dl">Pizza</div>
+          <dt class="overrubrik-dl">Pizza</dt>
           <dt>Margharita</dt>
           <dd>
             Tomatsås på san marzano-tomater, fior di latte & basilika. 120 kr
@@ -144,7 +150,7 @@
         </dl>
 
         <dl id="vino-meny">
-          <div class="overrubrik-dl">Vino</div>
+          <dt class="overrubrik-dl">Vino</dt>
           <dt>Husets röda</dt>
           <dd>Nonnas utvalda rödvin. 85 kr</dd>
 
@@ -156,7 +162,7 @@
         </dl>
 
         <dl id="birra-meny">
-          <div class="overrubrik-dl">Birra</div>
+          <dt class="overrubrik-dl">Birra</dt>
           <dt>Birra Moretti</dt>
           <dd>Ljus lager. 50 kr</dd>
 
@@ -168,7 +174,7 @@
         </dl>
 
         <dl id="dolci-meny">
-          <div class="overrubrik-dl">Dolci</div>
+          <dt class="overrubrik-dl">Dolci</dt>
           <dt>Tiramisu</dt>
           <dd>Klassisk Tiramisu. 89 kr</dd>
 
@@ -219,3 +225,5 @@
     </footer>
   </body>
 </html>
+
+<!-- Validated 16/9-24 -->
