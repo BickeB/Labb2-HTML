@@ -27,18 +27,43 @@ nav {
     background-color: white;
     padding: 0.5rem;
     width: 100%;
+    /* Säkerställer att nav hamnar "längst fram" */
     z-index: 10;
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.7) ;
 }
+
 
 nav a {
     text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 0.2rem;
+}
 
+
+
+/* skapar ett pseudo-element */
+nav a::after {
+    content: ''; /*En tom sträng */
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height:2.5px;
+    background-color: transparent; /*Ser till att linjen är transparent by default */
+    transition: background-color 0.5s ease;
+}
+
+nav a:hover::after {
+    background-color:#b91717;
 }
 
 #logga {
     font-size: 2rem;
     color: #23272a;
     font-weight: 500;
+    margin-left: 1rem;
 }
 /* Checkbox */
 input[type="checkbox"] {
@@ -60,10 +85,13 @@ ul {
 ul a {
     padding: 1.2rem;
     color: black;
+    font-weight: 500;
+    margin-right: 1rem;
 }
 
 ul a:hover {
     color:#36a543;
+    transition: 0.5s;
 
 }
 
@@ -157,14 +185,15 @@ h1 {
     padding: 2rem;
     background-color:rgba(0, 0, 0, 0.7);
     border-radius: 5px;
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.7) ;
 }
 
 .bokabord-knapp {
     margin: auto;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     margin-top: 3rem;
-    border-radius: 50px;
-    border-color: black;
+    border-radius: 5px;
+    border: solid 2.5px black;
     background-color:rgba(0, 0, 0, 0.7);
     color:white;
     text-decoration: none;
@@ -172,6 +201,11 @@ h1 {
     font-weight: 550;
     font-size: 1.2rem;
 
+}
+
+button:hover {
+    background-color: #36a543;
+    transition: 0.7s;
 }
 
 #intro-secondary {
@@ -198,11 +232,10 @@ h1 {
 }
 
 #h2-meny {
-    font-size:  2rem;
+    font-size:  2.5rem;
     text-align: center;
     margin-top: 2rem;
     grid-area: h2-meny;
-
 }
 
 #meny-mat {
@@ -218,18 +251,22 @@ h1 {
     padding: 3rem;
 }
 
+
+.overrubrik-dl {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    background-color: #36a543;
+    border-bottom: #b91717 4px solid;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
 #meny-mat dd {
     margin-bottom: 1.5rem;
 }
 
 #meny-mat dt {
     font-weight: 600;
-}
-
-.h3-meny-titel {
-    text-align: center;
-    padding: 1rem;
-    text-decoration: underline;
 }
 
 #antipasti-meny {
@@ -360,8 +397,8 @@ dt, dd{
 
 }
 
-/* Denna media query skapar en hamburgarmeny vid 780px. Det är ungefär då "vanliga" nav-baren behöver bryta */
-@media screen and (max-width:780px) {
+/* Denna media query skapar en hamburgarmeny vid 860px. Det är ungefär då "vanliga" nav-baren behöver bryta */
+@media screen and (max-width:860px) {
     label   {
         display: block;
     }
@@ -376,10 +413,14 @@ dt, dd{
         gap: 2em;
         top: 60px;
         width: 100%;
-        height:50vh;
+        height:auto; /*Anpassar efter innehållet */
         transition: 0.6s;
         margin-top: 0;
-        padding: 1rem;
+        padding: 2rem;
+    }
+
+    .overlay-content {
+        display: none;
     }
 
     input[type="checkbox"]:checked ~ ul {
