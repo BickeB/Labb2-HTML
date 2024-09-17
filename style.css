@@ -81,7 +81,6 @@ nav a:hover::after {
 input[type="checkbox"] {
   /* För att dölja den */
   appearance: none;
-  /* -webkit-appearance: none; */
 }
 
 label {
@@ -223,7 +222,7 @@ p {
   grid-template-areas:
     "meny-header meny-header meny-header"
     "antipasti pizza-meny pasta-meny"
-    "vino-meny birra-meny dolci-meny";
+    "vino-meny birra-meny dolce-meny";
   grid-gap: 2rem;
   text-align: center;
   padding: 3rem;
@@ -266,8 +265,8 @@ p {
   grid-area: birra-meny;
 }
 
-#dolci-meny {
-  grid-area: dolci-meny;
+#dolce-meny {
+  grid-area: dolce-meny;
 }
 
 dl {
@@ -365,7 +364,7 @@ dd {
       "pasta-meny"
       "vino-meny"
       "birra-meny"
-      "dolci-meny";
+      "dolce-meny";
   }
 
   .footer {
@@ -392,7 +391,7 @@ dd {
     grid-template-areas:
       "meny-header meny-header meny-header"
       "antipasti pizza-meny pasta-meny"
-      "vino-meny birra-meny dolci-meny";
+      "vino-meny birra-meny dolce-meny";
   }
 
   .footer {
