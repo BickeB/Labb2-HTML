@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- Länk till biblioteket -->
+    <!-- Länk till biblioteket för hamburgarmeny-ikonen -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -24,7 +24,7 @@
   <body>
     <header>
       <nav>
-        <!-- #/länkarna går till hoppar till olika delarna. Hade jag gjort fler html-sidor, hade de istället hoppat till dem. -->
+        <!-- #/länkarna hoppar till de olika delarna. Hade jag gjort fler html-sidor, hade de istället hoppat till dem. -->
         <a href="#jumplink-main-content" id="logga">Trattoria Anzio</a>
         <input type="checkbox" id="hamburger" />
         <label for="hamburger">
@@ -58,13 +58,14 @@
           alt="bild_på_pasta"
           class="full-width-image"
         />
+        <!-- Innehåll som är "ovanpå" bilden -->
         <div class="overlay-content">
           <h1>Trattoria Anzio</h1>
           <button type="button" class="bokabord-knapp">Boka bord</button>
         </div>
       </section>
 
-      <!-- Introsektion med mer om restaurangen -->
+      <!-- Introsektion med mer info om restaurangen -->
       <section id="intro-secondary">
         <h2>Välkommen till Trattoria Anzio</h2>
         <p id="intro-p1">
@@ -84,7 +85,6 @@
         <h2 id="meny-header">Meny</h2>
         <dl id="antipasti-meny">
           <!-- Insåg på tok försent att det inte går att ha rubrikelement inom dl-element. Min lösning var att placera ytterligare ett <dt> för överrubrik -->
-
           <dt class="overrubrik-dl">Antipasti</dt>
           <dt>Antipasti Misti</dt>
           <dd>
@@ -158,7 +158,7 @@
           <dd>Nonnas utvalda vitvin. 85 kr</dd>
 
           <dt>Rosévin</dt>
-          <dd>Fråga personalen</dd>
+          <dd>Fråga personalen.</dd>
         </dl>
 
         <dl id="birra-meny">
@@ -209,7 +209,9 @@
 
       <div class="footer-content" id="footer-bokabord">
         <h3>Boka Bord</h3>
-        <button type="button" class="bokabord-knapp">Boka bord</button>
+        <button type="button" class="bokabord-knapp" id="footer-button">
+          Boka bord
+        </button>
       </div>
 
       <div class="footer-content" id="footer-kontakt">

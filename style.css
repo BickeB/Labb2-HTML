@@ -103,7 +103,7 @@ ul a {
 }
 
 ul a:hover {
-  color: #36a543;
+  color: #2e8538;
   transition: 0.5s;
 }
 
@@ -151,6 +151,7 @@ ul a:hover {
 
 h1 {
   font-size: 3rem;
+  font-weight: 500;
   width: 30rem;
   margin: 2rem;
   padding: 2rem;
@@ -162,20 +163,20 @@ h1 {
 .bokabord-knapp {
   margin: auto;
   padding: 1rem 2.5rem;
-  margin-top: 3rem;
-  border-radius: 5px;
-  border: solid 2.5px black;
-  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.702);
   color: white;
   text-decoration: none;
   list-style-type: none;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 1.2rem;
 }
 
 button:hover {
-  background-color: #36a543;
-  transition: 0.7s;
+  background-color: #23272a;
+  transition: 0.5s;
 }
 
 /* Sectionen med innehåll
@@ -289,27 +290,39 @@ dd {
   text-align: center;
 }
 
+/* Styr H3-rubriken i footern */
+.footer-content h3 {
+  font-size: 1.3rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+/* Container för email-delen */
 .email-container {
   display: flex;
   align-items: center;
 }
 
+/*Anpassar knappen i footern specifikt */
+#footer-button {
+  padding: 1rem;
+  border: solid 1.5px #23272a;
+}
+
+/* Class för innehållet i footern */
 .footer-content p {
   margin: 1rem;
   padding: 0;
+  font-size: 1rem;
 }
 
+/* Styr Email-länken */
 .footer-content a {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .footer-content .email-container {
   margin-right: 0.5rem;
-}
-
-.footer-content h3 {
-  font-size: 1.5rem;
-  padding: 1rem;
 }
 
 .footer-content dl {
@@ -421,3 +434,4 @@ dd {
 }
 
 /* Validated 16/9-24 */
+/* Kollat kontraster mellan background-color och foreground i Colorreview  17/9-24*/
