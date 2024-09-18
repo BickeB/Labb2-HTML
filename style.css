@@ -106,6 +106,7 @@ ul a:hover {
   transition: 0.5s;
 }
 
+/* Main */
 .main-content {
   grid-area: main-content;
   display: grid;
@@ -133,6 +134,7 @@ ul a:hover {
   position: relative;
 }
 
+/* En class för innehållet ovanpå bakgrundsbilden */
 .overlay-content {
   position: absolute;
   height: auto;
@@ -174,7 +176,8 @@ h1 {
 }
 
 button:hover {
-  background-color: #23272a;
+  background-color: white;
+  color: #23272a;
   transition: 0.5s;
 }
 
@@ -191,7 +194,7 @@ button:hover {
   display: grid;
 }
 
-/* "Välkommen till Trattoria Anzio */
+/* "Välkommen till Trattoria Anzio - H2 */
 #intro-secondary h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -228,7 +231,7 @@ p {
   padding: 3rem;
 }
 
-/* Min rubriklösning inom en div, då det inte fungerar att ha rubrikelement i <dl>S */
+/* Insåg på tok försent att det inte går att ha rubrikelement inom dl-element. Min lösning var att placera ytterligare ett <dt> för överrubrik. */
 .overrubrik-dl {
   font-size: 1.7rem;
   margin-bottom: 2rem;
@@ -302,15 +305,20 @@ dd {
   align-items: center;
 }
 
-/*Anpassar knappen i footern specifikt */
+/*Anpassar button i footern specifikt */
 #footer-button {
   padding: 1rem;
   border: solid 1.5px #23272a;
 }
 
+#footer-button:hover {
+  background-color: #23272a;
+  color: white;
+}
+
 /* Class för innehållet i footern */
 .footer-content p {
-  margin: 1rem;
+  margin: 0.5rem;
   padding: 0;
   font-size: 1rem;
 }
